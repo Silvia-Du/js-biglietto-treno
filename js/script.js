@@ -13,26 +13,27 @@ Flusso di lavoro:
 */
 
 
-// 1. 2.
+// 1. 2. 3.
 
-const journeyKm = 30.52;  //prompt
-const userAge = 68; //prompt
+
+const journeyKm = prompt('Quanti kilometri devi percorrere?');
+const userAge = prompt('Quanti anni hai?');
 const costForKm = 0.21;
 const fullPriceTiket = journeyKm * costForKm;
-let finalCostTiket
-
-
+let finalCostTiket;
 
 console.log('costo del tiket intero è' + " " + fullPriceTiket);
 
-// 3.
+// 4.
 if(userAge < 18) {
   finalCostTiket = fullPriceTiket - (fullPriceTiket / 100 *20);
+  alert('Hai diritto ad uno sconto del 20%!');
   console.log('costo da minorenne');
 
 } else if(userAge >= 65) {
   finalCostTiket = fullPriceTiket - (fullPriceTiket / 100 *40);
   console.log('costo da anziano');
+  alert('Hai diritto ad uno sconto del 40%!');
 
 } else {
   finalCostTiket = fullPriceTiket;
@@ -41,10 +42,12 @@ if(userAge < 18) {
 
 console.log(finalCostTiket);
 
-let roundedCost = finalCostTiket.toFixed(2)
+let roundedCost = finalCostTiket.toFixed(2);
 
 console.log(roundedCost);
 
+document.getElementById('output-price').innerHTML += roundedCost + ' €'; 
+document.getElementById('button-pay').innerHTML = 'paga ora'
 
 
 
