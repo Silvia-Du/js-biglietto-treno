@@ -16,7 +16,7 @@ Flusso di lavoro:
 // 1.
 
 const journeyKm = 30;  //prompt
-const userAge = 50; //prompt
+const userAge = 68; //prompt
 const costForKm = 0.21;
 const fullPriceTiket = journeyKm * costForKm;
 let finalCostTiket
@@ -24,14 +24,15 @@ let finalCostTiket
 console.log('costo del tiket intero è' + " " + fullPriceTiket);
 
 if(userAge < 18) {
-  //finalCostTiket = fullPriceTiket - (fullPriceTiket / 100 *20);
+  finalCostTiket = fullPriceTiket - (fullPriceTiket / 100 *20);
   console.log('costo da minorenne');
 
 } else if(userAge >= 65) {
-  //finalCostTiket = fullPriceTiket - (fullPriceTiket / 100 *40);
+  finalCostTiket = fullPriceTiket - (fullPriceTiket / 100 *40);
   console.log('costo da anziano');
+
 } else {
-  //finalCostTiket = fullPriceTiket;
+  finalCostTiket = fullPriceTiket;
   console.log('costo intero');
 }
 
