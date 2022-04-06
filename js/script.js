@@ -13,16 +13,19 @@ Flusso di lavoro:
 */
 
 
-// 1.
+// 1. 2.
 
-const journeyKm = 30;  //prompt
+const journeyKm = 30.52;  //prompt
 const userAge = 68; //prompt
 const costForKm = 0.21;
 const fullPriceTiket = journeyKm * costForKm;
 let finalCostTiket
 
+
+
 console.log('costo del tiket intero è' + " " + fullPriceTiket);
 
+// 3.
 if(userAge < 18) {
   finalCostTiket = fullPriceTiket - (fullPriceTiket / 100 *20);
   console.log('costo da minorenne');
@@ -37,6 +40,10 @@ if(userAge < 18) {
 }
 
 console.log(finalCostTiket);
+
+let roundedCost = finalCostTiket.toFixed(2)
+
+console.log(roundedCost);
 
 
 
