@@ -11,3 +11,14 @@ Flusso di lavoro:
 4. calcolare lo sconto (se previsto) in base all'età
 5.stampare il prezzo del biglietto
 */
+
+
+// 1.
+
+const journeyKm = 25;  //prompt
+const userAge = 53; //prompt
+const costForKm = 0.21;
+const fullPriceTiket = journeyKm * costForKm;
+
+console.log('costo del tiket intero è' + " " + fullPriceTiket);
+
