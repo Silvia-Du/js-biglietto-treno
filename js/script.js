@@ -16,13 +16,43 @@ Flusso di lavoro:
 // 1. 2. 3.
 
 
-const journeyKm = prompt('Quanti kilometri devi percorrere?');
-const userAge = prompt('Quanti anni hai?');
+const journeyKm = parseInt(prompt('Quanti kilometri devi percorrere?'));
+const userAge = parseInt(prompt('Quanti anni hai?'));
 const costForKm = 0.21;
 const fullPriceTiket = journeyKm * costForKm;
 let finalCostTiket;
 
 console.log('costo del tiket intero è' + " " + fullPriceTiket);
+
+let checkUserData= true;
+
+if (isNaN(userAge)){
+  alert('inserire una cifra numerica')
+  checkUserData= false;
+}
+
+if (isNaN(journeyKm)){
+  alert('inserire una cifra numerica')
+  checkUserData= false;
+}
+
+let stopMessage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 4.
 if(userAge < 18) {
