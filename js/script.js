@@ -20,42 +20,23 @@ const journeyKm = parseInt(prompt('Quanti kilometri devi percorrere?'));
 const userAge = parseInt(prompt('Quanti anni hai?'));
 const costForKm = 0.21;
 const fullPriceTiket = journeyKm * costForKm;
+
+console.log('costo del tiket intero è '+ fullPriceTiket);
 let finalCostTiket;
-
-console.log('costo del tiket intero è' + " " + fullPriceTiket);
-
 let checkUserData= true;
 
 if (isNaN(userAge)){
-  alert('inserire una cifra numerica')
+  alert('inserire gli anni con una cifra numerica!')
   checkUserData= false;
 }
 
 if (isNaN(journeyKm)){
-  alert('inserire una cifra numerica')
+  alert('inserire una cifra numerica!')
   checkUserData= false;
 }
 
-let stopMessage
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 4.
-if(userAge < 18) {
+if(userAge < 18){
   finalCostTiket = fullPriceTiket - (fullPriceTiket / 100 *20);
   alert('Hai diritto ad uno sconto del 20%!');
   console.log('costo da minorenne');
